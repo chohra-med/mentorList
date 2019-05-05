@@ -12,10 +12,13 @@ import{
     I18nManager,
     Alert
 }
-from'react-native'
+from'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import _ from 'lodash'
 
+//we import Loadach to filter Items 
+import _ from 'lodash';
+
+// Data that will be showed first
 const firstData=[
     {"id": 1, "helps":"business & devlopment",  "name": "Chohra Mohammed"},
     {"id": 2, "helps":"business & devlopment",  "name": "Amir Khoutir"},
@@ -28,6 +31,8 @@ const firstData=[
     {"id": 9, "helps":"business & devlopment",  "name": "Borsali Faycel"},
     {"id": 10,"helps":"business & devlopment",  "name": "Bouguesri Adel"}
     ];
+
+    // Data that will be showed after
 const secondData=[
     {"id": 412, "helps":"busineass & devlopment",  "name": "Neddar Islem"},
     {"id": 323, "helps":"busineszs & devlopment",  "name": "Khodja Mehdi"},
@@ -38,7 +43,9 @@ const secondData=[
     {"id": 610,"helps":"busineshs & devlopment",  "name": "Kafi Abderrazak"}
 
 ];
-    const isCloseToBottom = ({layoutMeasurement, contentOffset, contentSize}) => {
+
+//this function return if ScrollView reached the buttom or not
+const isCloseToBottom = ({layoutMeasurement, contentOffset, contentSize}) => {
         const paddingToBottom = 20;
         return layoutMeasurement.height + contentOffset.y >=
           contentSize.height - paddingToBottom;
@@ -58,20 +65,28 @@ export default class Home extends Component
         this.filterby=this.filterby.bind(this);
         this.orderby=this.orderby.bind(this);
        }
+
+       //to filter our data by NAME
        filterby(){
         let data=this.state.generalData;
         data = data.filter(x => String(x.name.toUpperCase()).includes(this.state.nameFiltred.toUpperCase()));
         this.setState({ourData:data})
        }
+
+       //to order our data by NAME
        orderby(){
             let data=this.state.ourData;
             data=_.sortBy(data,['name', 'id'])
             this.setState({ourData:data})
        }
+       //We recupere our data and put it in our State
        componentWillMount(){
           this.setState({ourData:firstData}) 
           this.setState({generalData:firstData}) 
        }
+
+       // this is called when we want to add the second data
+       // When scrollView reached its end
        updateList(){
         if(!this.state.loadMore)
             {
@@ -84,7 +99,7 @@ export default class Home extends Component
         }
     }
    
-  
+  //This enable us to control the direction for different language
   _onDirectionChange = () => {
     I18nManager.forceRTL(this.state.isRTL);
     this.setState({isRTL: !this.state.isRTL});
@@ -96,8 +111,8 @@ export default class Home extends Component
     );
   }
 
-
-       showList(){
+//This function enable us to MAP our Data in the our form
+showList(){
            return(
             this.state.ourData.map(data => {
                 return(
@@ -138,7 +153,8 @@ export default class Home extends Component
 
            );
        }
-       
+
+    //this is called when we refresh our scroll view 
        _onRefresh = () => {
         this.setState({refreshing: true});
         this.setState({ourData:this.state.generalData}) 
@@ -206,6 +222,8 @@ export default class Home extends Component
         );
       }
     }
+
+    //Our styles
     const styles=StyleSheet.create({
         image:{
             width: 60, 
