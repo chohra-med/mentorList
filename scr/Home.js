@@ -10,13 +10,16 @@ import{
     RefreshControl,
     Switch,
     I18nManager,
-    Alert
+    Button
+    
 }
 from'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 //we import Loadach to filter Items 
 import _ from 'lodash';
+import I18n from '../locales/i18n';
+
 
 // Data that will be showed first
 const firstData=[
@@ -61,6 +64,7 @@ export default class Home extends Component
             nameFiltred:'',
             refreshing: false,
             isRTL:true,
+            currentLanguage:'en'
         };
         this.filterby=this.filterby.bind(this);
         this.orderby=this.orderby.bind(this);
@@ -81,8 +85,17 @@ export default class Home extends Component
        }
        //We recupere our data and put it in our State
        componentWillMount(){
+
           this.setState({ourData:firstData}) 
           this.setState({generalData:firstData}) 
+          this.setState({isRTL:!I18nManager.isRTL})
+          if(I18nManager.isRTL){
+            this.setState({ currentLanguage: 'ar' });
+        }
+        else{
+            this.setState({ currentLanguage: 'en' });
+    
+        }
        }
 
        // this is called when we want to add the second data
@@ -100,15 +113,16 @@ export default class Home extends Component
     }
    
   //This enable us to control the direction for different language
-  _onDirectionChange = () => {
+  _onDirectionChange =() =>{
     I18nManager.forceRTL(this.state.isRTL);
-    this.setState({isRTL: !this.state.isRTL});
-    Alert.alert(
-      'Reload this page',
-      'Please reload this page to change the UI direction! ' +
-        'All examples in this app will be affected. ' +
-        'Check them out to see what they look like in RTL layout.',
-    );
+    this.setState({isRTL: !this.state.isRTL}); 
+    if(this.state.isRTL){
+        this.setState({ currentLanguage: 'ar' });
+    }
+    else{
+        this.setState({ currentLanguage: 'en' });
+
+    }
   }
 
 //This function enable us to MAP our Data in the our form
@@ -135,6 +149,7 @@ showList(){
                        onPress={()=>{
      
                        }}
+
                  >
                  </Icon>
                  
@@ -161,57 +176,66 @@ showList(){
           this.setState({refreshing: false});
           this.setState({nameFiltred:''})
       }
-    
+      
+
        
     render() {
+        I18n.locale = this.state.currentLanguage;
+        I18n.fallbacks = true;
+
         return (
             <View>
                 <View style={{flexDirection:'row',
                             justifyContent:'center'}}>
                 <TextInput
                     style={{height: 40,borderWidth:2,margin:5,width:'60%'}}
-                    placeholder="Type here to filter by NAME!"
+                    placeholder={I18n.t('filtering')}
                     value={this.state.nameFiltred}
                     onChangeText={(nameFiltred) => {this.setState({nameFiltred});
-                        this.filterby;
-                    }}
+                        this.filterby;}}
                     />    
                     <TouchableOpacity
                         style={{width:30,justifyContent:'center', borderRadius:20,borderColor:'grey',margin:6}} 
-                        onPress={this.filterby}>
+                        onPress={this.filterby}
+                    >
                         <Icon color='black' size={20} name="search"/>
                     </TouchableOpacity>                
                    
                     <TouchableOpacity
                         style={{justifyContent:'center', borderRadius:4,borderColor:'grey',borderWidth:1,marginLeft:20,margin:6}} 
-                        onPress={this.orderby}>
-                        <Text style={{fontSize:14,color:'black'}}> SortElements</Text>
+                        onPress={this.orderby}
+                    >
+                        <Text style={{fontSize:14,color:'black'}}> {I18n.t('sortElement')}</Text>
                     </TouchableOpacity>
                     
                 </View>
                 <View title={'Quickly Test RTL Layout'}>
-                    <View style={styles.flexDirectionRow}>
-                    <Text style={styles.switchRowTextView}>forceRTL</Text>
-                    <View style={styles.switchRowSwitchView}>
-                        <Switch
-                        onValueChange={this._onDirectionChange}
-                        style={styles.rightAlignStyle}
-                        value={this.state.isRTL}
-                        />
-                    </View>
+                    <View style={{flexDirection:'row',justifyContent:'center'}}>
+                        <Text style={[styles.name,{margin:1}]}> {I18n.t('changeLanguage')}</Text>
+                        <View style={styles.switchRowSwitchView}>
+                            <Switch
+                            onValueChange={this._onDirectionChange}
+                            style={styles.rightAlignStyle}
+                            value={this.state.isRTL}
+                            />
+                                
+                        </View>
                     </View>
                 </View>
                 <ScrollView 
-                    refreshControl={
+                   
+                   refreshControl={
                         <RefreshControl
                         refreshing={this.state.refreshing}
                         onRefresh={this._onRefresh}
                         />}
-                      contentContainerStyle={{ flexGrow: 1, borderWidth: 1,paddingBottom:80 }}
-                      onScroll={({nativeEvent}) => {
+                      
+                    contentContainerStyle={{ flexGrow: 1, borderWidth: 1,paddingBottom:80 }}
+                     
+                    onScroll={({nativeEvent}) => {
                         if (isCloseToBottom(nativeEvent)) {
                              this.updateList() }}}
-                      >
+                >
               <View>
                 { 
                 this.showList()
@@ -246,7 +270,9 @@ showList(){
         button:{
             marginTop:'5%',
             position:'absolute',
-            right:'5%'
+            right:'5%',
+            transform: [{scaleX: I18nManager.isRTL ? -1 : 1}]
+
         },
         name:{
             color:'black',
