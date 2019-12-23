@@ -1,1 +1,1 @@
-export const PROFILE = require('profile.jpg');
+export const PROFILE = require('./profile.jpg');

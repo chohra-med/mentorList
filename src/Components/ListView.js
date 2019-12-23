@@ -11,11 +11,10 @@ import {
     I18nManager,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-
+import styles from './ListViewStyle';
 //we import Loadach to filter Items
 import _ from 'lodash';
 import I18n from '../locales/i18n';
-import {PROFILE} from "../assets/Images";
 
 
 // Data that will be showed first
@@ -68,8 +67,12 @@ export default class ListView extends Component {
 
     //to filter our data by NAME
     filterby() {
-        let data = this.state.generalData;
-        data = data.filter(x => String(x.name.toUpperCase()).includes(this.state.nameFiltred.toUpperCase()));
+        let {
+            generalData,
+            nameFiltred
+        } = this.state;
+        let data = generalData;
+        data = data.filter(x => String(x.name.toUpperCase()).includes(nameFiltred.toUpperCase()));
         this.setState({ourData: data})
     }
 
@@ -126,9 +129,8 @@ export default class ListView extends Component {
                         <View style={styles.listViewContainer}>
                             <Image
                                 style={styles.image}
-                                source={PROFILE}
-                            >
-                            </Image>
+                                source={require('../assets/Images/profile.jpg')}
+                            />
                             <View style={styles.textContainer}>
                                 <Text style={styles.name}>{data.name}</Text>
                                 <Text style={styles.helps}> {data.helps}</Text>

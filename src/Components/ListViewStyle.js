@@ -1,6 +1,6 @@
 import {I18nManager, StyleSheet} from "react-native";
 
-const styles = StyleSheet.create({
+export default styles = StyleSheet.create({
     image: {
         width: 60,
         height: 60,
