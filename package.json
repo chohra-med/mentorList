@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "react": "16.8.3",
-    "react-native": "0.58"
+    "react-native": "0.58",
+    "react-native-dotenv": "^0.2.0",
+    "lodash": "latest"
   },
   "devDependencies": {
     "@babel/core": "7.4.4",
