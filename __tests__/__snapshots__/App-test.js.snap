@@ -1269,3 +1269,1273 @@ exports[`renders correctly 1`] = `
   </RCTScrollView>
 </View>
 `;
+
+exports[`renders the ListView 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      onChangeText={[Function]}
+      placeholder="Type here to filter by NAME"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "borderWidth": 2,
+          "height": 40,
+          "margin": 5,
+          "width": "60%",
+        }
+      }
+      underlineColorAndroid="transparent"
+      value=""
+    />
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "borderColor": "grey",
+          "borderRadius": 20,
+          "justifyContent": "center",
+          "margin": 6,
+          "opacity": 1,
+          "width": 30,
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "black",
+              "fontSize": 20,
+            },
+            undefined,
+            Object {
+              "fontFamily": "FontAwesome",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "borderColor": "grey",
+          "borderRadius": 4,
+          "borderWidth": 1,
+          "justifyContent": "center",
+          "margin": 6,
+          "marginLeft": 20,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontSize": 14,
+          }
+        }
+      >
+         
+        SortElements
+      </Text>
+    </View>
+  </View>
+  <View
+    title="Quickly Test RTL Layout"
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "black",
+              "fontSize": 16,
+            },
+            Object {
+              "margin": 1,
+            },
+          ]
+        }
+      >
+         
+        change Language
+      </Text>
+      <View>
+        <RCTSwitch
+          accessibilityRole="button"
+          onChange={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "height": 31,
+              "width": 51,
+            }
+          }
+          value={true}
+        />
+      </View>
+    </View>
+  </View>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "borderWidth": 1,
+        "flexGrow": 1,
+        "paddingBottom": 80,
+      }
+    }
+    onScroll={[Function]}
+    refreshControl={
+      <RefreshControlMock
+        onRefresh={[Function]}
+        refreshing={false}
+      />
+    }
+  >
+    <RCTRefreshControl />
+    <View>
+      <View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "flexDirection": "row",
+                "height": 80,
+                "justifyContent": "center",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/Images/profile.jpg",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 60,
+                  "height": 60,
+                  "left": "5%",
+                  "margin": 10,
+                  "position": "absolute",
+                  "width": 60,
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "flexDirection": "column",
+                  "margin": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "black",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                Chohra Mohammed
+              </Text>
+              <Text
+                style={Object {}}
+              >
+                 
+                Software engineer
+              </Text>
+            </View>
+            <Text
+              allowFontScaling={false}
+              onPress={[Function]}
+              style={
+                Array [
+                  Object {
+                    "color": "black",
+                    "fontSize": 32,
+                  },
+                  Object {
+                    "marginTop": "5%",
+                    "position": "absolute",
+                    "right": "5%",
+                    "transform": Array [
+                      Object {
+                        "scaleX": 1,
+                      },
+                    ],
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "borderBottomColor": "black",
+                "borderBottomWidth": 0.5,
+                "marginLeft": "5%",
+                "width": "90%",
+              }
+            }
+          />
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "flexDirection": "row",
+                "height": 80,
+                "justifyContent": "center",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/Images/profile.jpg",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 60,
+                  "height": 60,
+                  "left": "5%",
+                  "margin": 10,
+                  "position": "absolute",
+                  "width": 60,
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "flexDirection": "column",
+                  "margin": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "black",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                Amir Khoutir
+              </Text>
+              <Text
+                style={Object {}}
+              >
+                 
+                Junior Mobile Developer
+              </Text>
+            </View>
+            <Text
+              allowFontScaling={false}
+              onPress={[Function]}
+              style={
+                Array [
+                  Object {
+                    "color": "black",
+                    "fontSize": 32,
+                  },
+                  Object {
+                    "marginTop": "5%",
+                    "position": "absolute",
+                    "right": "5%",
+                    "transform": Array [
+                      Object {
+                        "scaleX": 1,
+                      },
+                    ],
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "borderBottomColor": "black",
+                "borderBottomWidth": 0.5,
+                "marginLeft": "5%",
+                "width": "90%",
+              }
+            }
+          />
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "flexDirection": "row",
+                "height": 80,
+                "justifyContent": "center",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/Images/profile.jpg",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 60,
+                  "height": 60,
+                  "left": "5%",
+                  "margin": 10,
+                  "position": "absolute",
+                  "width": 60,
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "flexDirection": "column",
+                  "margin": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "black",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                Chellaf Younes
+              </Text>
+              <Text
+                style={Object {}}
+              >
+                 
+                Junior Data Science
+              </Text>
+            </View>
+            <Text
+              allowFontScaling={false}
+              onPress={[Function]}
+              style={
+                Array [
+                  Object {
+                    "color": "black",
+                    "fontSize": 32,
+                  },
+                  Object {
+                    "marginTop": "5%",
+                    "position": "absolute",
+                    "right": "5%",
+                    "transform": Array [
+                      Object {
+                        "scaleX": 1,
+                      },
+                    ],
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "borderBottomColor": "black",
+                "borderBottomWidth": 0.5,
+                "marginLeft": "5%",
+                "width": "90%",
+              }
+            }
+          />
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "flexDirection": "row",
+                "height": 80,
+                "justifyContent": "center",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/Images/profile.jpg",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 60,
+                  "height": 60,
+                  "left": "5%",
+                  "margin": 10,
+                  "position": "absolute",
+                  "width": 60,
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "flexDirection": "column",
+                  "margin": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "black",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                Bederrer Alladin
+              </Text>
+              <Text
+                style={Object {}}
+              >
+                 
+                Senior Data Science
+              </Text>
+            </View>
+            <Text
+              allowFontScaling={false}
+              onPress={[Function]}
+              style={
+                Array [
+                  Object {
+                    "color": "black",
+                    "fontSize": 32,
+                  },
+                  Object {
+                    "marginTop": "5%",
+                    "position": "absolute",
+                    "right": "5%",
+                    "transform": Array [
+                      Object {
+                        "scaleX": 1,
+                      },
+                    ],
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "borderBottomColor": "black",
+                "borderBottomWidth": 0.5,
+                "marginLeft": "5%",
+                "width": "90%",
+              }
+            }
+          />
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "flexDirection": "row",
+                "height": 80,
+                "justifyContent": "center",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/Images/profile.jpg",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 60,
+                  "height": 60,
+                  "left": "5%",
+                  "margin": 10,
+                  "position": "absolute",
+                  "width": 60,
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "flexDirection": "column",
+                  "margin": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "black",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                Benyamina Mouad
+              </Text>
+              <Text
+                style={Object {}}
+              >
+                 
+                Junior Mobile Developer
+              </Text>
+            </View>
+            <Text
+              allowFontScaling={false}
+              onPress={[Function]}
+              style={
+                Array [
+                  Object {
+                    "color": "black",
+                    "fontSize": 32,
+                  },
+                  Object {
+                    "marginTop": "5%",
+                    "position": "absolute",
+                    "right": "5%",
+                    "transform": Array [
+                      Object {
+                        "scaleX": 1,
+                      },
+                    ],
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "borderBottomColor": "black",
+                "borderBottomWidth": 0.5,
+                "marginLeft": "5%",
+                "width": "90%",
+              }
+            }
+          />
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "flexDirection": "row",
+                "height": 80,
+                "justifyContent": "center",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/Images/profile.jpg",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 60,
+                  "height": 60,
+                  "left": "5%",
+                  "margin": 10,
+                  "position": "absolute",
+                  "width": 60,
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "flexDirection": "column",
+                  "margin": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "black",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                Sabour Oussama
+              </Text>
+              <Text
+                style={Object {}}
+              >
+                 
+                Senior FullStack Developer
+              </Text>
+            </View>
+            <Text
+              allowFontScaling={false}
+              onPress={[Function]}
+              style={
+                Array [
+                  Object {
+                    "color": "black",
+                    "fontSize": 32,
+                  },
+                  Object {
+                    "marginTop": "5%",
+                    "position": "absolute",
+                    "right": "5%",
+                    "transform": Array [
+                      Object {
+                        "scaleX": 1,
+                      },
+                    ],
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "borderBottomColor": "black",
+                "borderBottomWidth": 0.5,
+                "marginLeft": "5%",
+                "width": "90%",
+              }
+            }
+          />
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "flexDirection": "row",
+                "height": 80,
+                "justifyContent": "center",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/Images/profile.jpg",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 60,
+                  "height": 60,
+                  "left": "5%",
+                  "margin": 10,
+                  "position": "absolute",
+                  "width": 60,
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "flexDirection": "column",
+                  "margin": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "black",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                Oumellal Abdeslam
+              </Text>
+              <Text
+                style={Object {}}
+              >
+                 
+                Lead Fronted Developer
+              </Text>
+            </View>
+            <Text
+              allowFontScaling={false}
+              onPress={[Function]}
+              style={
+                Array [
+                  Object {
+                    "color": "black",
+                    "fontSize": 32,
+                  },
+                  Object {
+                    "marginTop": "5%",
+                    "position": "absolute",
+                    "right": "5%",
+                    "transform": Array [
+                      Object {
+                        "scaleX": 1,
+                      },
+                    ],
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "borderBottomColor": "black",
+                "borderBottomWidth": 0.5,
+                "marginLeft": "5%",
+                "width": "90%",
+              }
+            }
+          />
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "flexDirection": "row",
+                "height": 80,
+                "justifyContent": "center",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/Images/profile.jpg",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 60,
+                  "height": 60,
+                  "left": "5%",
+                  "margin": 10,
+                  "position": "absolute",
+                  "width": 60,
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "flexDirection": "column",
+                  "margin": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "black",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                Bouregag Abdelkaded
+              </Text>
+              <Text
+                style={Object {}}
+              >
+                 
+                Senior Backend Developer
+              </Text>
+            </View>
+            <Text
+              allowFontScaling={false}
+              onPress={[Function]}
+              style={
+                Array [
+                  Object {
+                    "color": "black",
+                    "fontSize": 32,
+                  },
+                  Object {
+                    "marginTop": "5%",
+                    "position": "absolute",
+                    "right": "5%",
+                    "transform": Array [
+                      Object {
+                        "scaleX": 1,
+                      },
+                    ],
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "borderBottomColor": "black",
+                "borderBottomWidth": 0.5,
+                "marginLeft": "5%",
+                "width": "90%",
+              }
+            }
+          />
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "flexDirection": "row",
+                "height": 80,
+                "justifyContent": "center",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/Images/profile.jpg",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 60,
+                  "height": 60,
+                  "left": "5%",
+                  "margin": 10,
+                  "position": "absolute",
+                  "width": 60,
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "flexDirection": "column",
+                  "margin": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "black",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                Borsali Faycel
+              </Text>
+              <Text
+                style={Object {}}
+              >
+                 
+                Senior Supply chain Specialist
+              </Text>
+            </View>
+            <Text
+              allowFontScaling={false}
+              onPress={[Function]}
+              style={
+                Array [
+                  Object {
+                    "color": "black",
+                    "fontSize": 32,
+                  },
+                  Object {
+                    "marginTop": "5%",
+                    "position": "absolute",
+                    "right": "5%",
+                    "transform": Array [
+                      Object {
+                        "scaleX": 1,
+                      },
+                    ],
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "borderBottomColor": "black",
+                "borderBottomWidth": 0.5,
+                "marginLeft": "5%",
+                "width": "90%",
+              }
+            }
+          />
+        </View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "flexDirection": "row",
+                "height": 80,
+                "justifyContent": "center",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/Images/profile.jpg",
+                }
+              }
+              style={
+                Object {
+                  "borderRadius": 60,
+                  "height": 60,
+                  "left": "5%",
+                  "margin": 10,
+                  "position": "absolute",
+                  "width": 60,
+                }
+              }
+            />
+            <View
+              style={
+                Object {
+                  "flexDirection": "column",
+                  "margin": 10,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "black",
+                    "fontSize": 16,
+                  }
+                }
+              >
+                Bouguesri Adel
+              </Text>
+              <Text
+                style={Object {}}
+              >
+                 
+                Junior Digital Marketing
+              </Text>
+            </View>
+            <Text
+              allowFontScaling={false}
+              onPress={[Function]}
+              style={
+                Array [
+                  Object {
+                    "color": "black",
+                    "fontSize": 32,
+                  },
+                  Object {
+                    "marginTop": "5%",
+                    "position": "absolute",
+                    "right": "5%",
+                    "transform": Array [
+                      Object {
+                        "scaleX": 1,
+                      },
+                    ],
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "borderBottomColor": "black",
+                "borderBottomWidth": 0.5,
+                "marginLeft": "5%",
+                "width": "90%",
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

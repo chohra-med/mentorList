@@ -56,28 +56,28 @@ export default class ListView extends Component {
             loadMore: false,
             ourData: [],
             generalData: [],
-            nameFiltred: '',
+            nameFiltered: '',
             refreshing: false,
             isRTL: true,
             currentLanguage: 'en'
         };
-        this.filterby = this.filterby.bind(this);
-        this.orderby = this.orderby.bind(this);
+        this.filterBy = this.filterBy.bind(this);
+        this.orderBy = this.orderBy.bind(this);
     };
 
     //to filter our data by NAME
-    filterby() {
+    filterBy() {
         let {
             generalData,
-            nameFiltred
+            nameFiltered
         } = this.state;
         let data = generalData;
-        data = data.filter(x => String(x.name.toUpperCase()).includes(nameFiltred.toUpperCase()));
+        data = data.filter(x => String(x.name.toUpperCase()).includes(nameFiltered.toUpperCase()));
         this.setState({ourData: data})
     }
 
     //to order our data by NAME
-    orderby() {
+    orderBy() {
         let data = this.state.ourData;
         data = _.sortBy(data, ['name', 'id']);
         this.setState({ourData: data})
@@ -105,7 +105,7 @@ export default class ListView extends Component {
             this.setState({generalData: data});
             this.setState({ourData: data});
             this.setState({loadMore: true});
-            this.setState({nameFiltred: ''})
+            this.setState({nameFiltered: ''})
         }
     }
 
@@ -163,12 +163,12 @@ export default class ListView extends Component {
         this.setState({refreshing: true});
         this.setState({ourData: this.state.generalData});
         this.setState({refreshing: false});
-        this.setState({nameFiltred: ''})
+        this.setState({nameFiltered: ''})
     };
 
 
     render() {
-        let {currentLanguage, nameFiltred, refreshing} = this.state;
+        let {currentLanguage, nameFiltered, refreshing} = this.state;
         I18n.locale = currentLanguage;
         I18n.fallbacks = true;
         return (
@@ -180,15 +180,15 @@ export default class ListView extends Component {
                     <TextInput
                         style={{height: 40, borderWidth: 2, margin: 5, width: '60%'}}
                         placeholder={I18n.t('filtering')}
-                        value={nameFiltred}
-                        onChangeText={(nameFiltred) => {
-                            this.setState({nameFiltred});
-                            this.filterby;
+                        value={nameFiltered}
+                        onChangeText={(nameFiltered) => {
+                            this.setState({nameFiltered});
+                            this.filterBy;
                         }}
                     />
                     <TouchableOpacity
                         style={{width: 30, justifyContent: 'center', borderRadius: 20, borderColor: 'grey', margin: 6}}
-                        onPress={this.filterby}
+                        onPress={this.filterBy}
                     >
                         <Icon color='black' size={20} name="search"/>
                     </TouchableOpacity>
@@ -202,7 +202,7 @@ export default class ListView extends Component {
                             marginLeft: 20,
                             margin: 6
                         }}
-                        onPress={this.orderby}
+                        onPress={this.orderBy}
                     >
                         <Text style={{fontSize: 14, color: 'black'}}> {I18n.t('sortElement')}</Text>
                     </TouchableOpacity>
