@@ -36,6 +36,7 @@ Search And Filter by Name         |  Change Language
     - config : we put our configuration on the folder "right now it is empty"
     - locales: for changing the language using i18n
     - Utils: if we have some Components that are used in different components
+- /__tests __ : where we put our tests
     
 
 
